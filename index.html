@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<title>Evolução</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./assets/img/evoCapa.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.tablink:hover {
+    background-color: lightgray;
+}
+.hoverr {
+    transition: 0.3s;
+}
+
+.tablink {
+    transition: 0.3s;
+}
+
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="hover w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="hoverr w3-button w3-block w3-black">INTRODUÇÃO</a>
+    </div>
+    <div class="w3-col s3">
+        <a href="#mecanicas" class="hoverr w3-button w3-block w3-black">MECÂNICAS</a>
+      </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="hoverr w3-button w3-block w3-black">CARACTERÍSTICAS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu2" class="hoverr w3-button w3-block w3-black">HABILIDADES</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 6am to 5pm</span>
+  </div>
+  <!-- <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Evolução</span>
+  </div> -->
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">INTRODUÇÃO</span></h5>
+    Evolução – RPG (ERPG) é um sistema de Role Play Game inspirado na evolução dos animais em geral. Muita da inspiração veio de E.V.O – Search for Eden e Tier Zoo, um jogo de Super Nintendo e um canal no youtube, respectivamente.
+	ERPG consiste em um jogo onde você tem um número de Pontos de Evolução (PE) para investir na sua criatura. As criaturas do jogo possuem inteligência e conseguem se organizar em sociedade como no mundo em que vivemos, mas muitas coisas que as vezes consideramos básicas requerem um custo de PE.
+	O objetivo de ERPG depende da vontade do Mestre da Evolução, ou o nome do jogador que irá citar a história (Dungeon Master em muitos sistemas de muitos RPG de mesa medieval). Assim como neles, a história é toda baseada nas escolhas do Mestre e dos Jogadores, que pode partir de uma simples sobrevivência, a questões da sociedade das criaturas.
+    <!-- <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+    </div>
+    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+  </div> -->
+  </div>
+  <div class="w3-container" id="mecanicas">
+    <div class="w3-content" style="max-width:700px">
+   
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MECÂNICAS</span></h5>
+      Agora serão mostradas as mecânicas do jogo, assim como os status, suas eficiências e como funcionam ataques.
+    <br>
+    <br>
+      <div class="w3-row w3-center w3-card w3-padding">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Status');">
+          <div class="w3-col s6 tablink">Status</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Sub-Status');">
+          <div class="w3-col s6 tablink">Sub-Status</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Condicoes');">
+          <div class="w3-col s6 tablink">Condições</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Ambientes');">
+          <div class="w3-col s6 tablink">Ambientes</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Combate');">
+          <div class="w3-col tablink">Combate</div>
+        </a>
+      </div>
+  
+      <div id="Status" class="w3-container menu w3-padding-48 w3-card">
+        Há um total de 4 status principais no jogo: Agilidade, Defesa, Inteligência e Vigor. Esses status possuem um valor mínimo de 1 e são definidos a partir das escolhas feitas nas Características e Habilidades. Você começa com 5 em cada status e vai fazendo as devidas alterações na medida em que for atualizando as Habilidades e Características.
+        <br><br>
+        Observação: Um status NUNCA pode chegar a abaixo de 1. Se você for pegar uma habilidade ou característica que iria fazer isso, você é impossibilitado de pegá-la.
+        <br><br>A descrição de cada status é a seguinte:
+        <br>
+        <br>
+
+        <h5>Agilidade</h5>
+        <p class="w3-text-grey">Capacidade de velocidade máxima, pulos, desvios e movimentações em geral.</p><br>
+
+        <h5>Defesa</h5>
+        <p class="w3-text-grey">Capacidade de absorção de impactos.</p><br>
+
+        <h5>Inteligência</h5>
+        <p class="w3-text-grey">Capacidade para fazer certas ações motoras e estratégias.</p><br>
+
+        <h5>Vigor</h5>
+        <p class="w3-text-grey">Capacidade de aguentar a utilização de atividades físicas por um longo período de tempo, prender respiração, e energia.</p>
+  
+      </div>
+  
+      <div id="Sub-Status" class="w3-container menu w3-padding-48 w3-card">
+        Sub-Status basicamente são outros tipos de status só que mais específicos. A lista dos sub-status e suas funções está logo a seguir:<br><br>
+
+        <h5>Alcance de visão</h5>
+        <p class="w3-text-grey">Distância que você consegue identificar objetos de tamanho próximo ao seu. Se esse objeto ficar fora do seu campo de visão, você não consegue distingui-lo do ambiente. O valor inicial do seu Alcance de Visão é 60 m.</p><br>
+
+        <h5>Ameaça</h5>
+        <p class="w3-text-grey">Define o quão ameaçador você é. Criaturas com até 2 valores de diferença não sentem nada em relação a você. Contudo, se você for mais abaixo que isso, as criaturas vão sentir-se acomodadas com sua presença, mas vão duvidar de suas habilidades em geral.
+           <br><br>O inverso acontece se sua Ameaça foi acima disso, ou seja, criaturas vão ficar perturbadas com você por perto e têm a certeza que você é uma criatura muito habilidosa. 
+           <br><br>Criaturas com menos ameaça conseguem ter mais sucesso em pedir coisas ou em situações sociais que independem de intimidação ou algo “negativo” do que as com maior Ameaça.</p><br>
+
+        <h5>Ataque</h5>
+        <p class="w3-text-grey">Esse sub-status está relacionado com seu manuseio de determinado tipo de ataque. Quanto mais você tem, maior dano e taxa de acerto você terá com ele.</p><br>
+
+        <h5>Desvantagem</h5>
+        <p class="w3-text-grey">Se você possui desvantagem a alguma coisa, você tem -5 de modificador em dados que a envolvem.</p><br>
+
+        <h5>Fraqueza</h5>
+        <p class="w3-text-grey">Se você é fraco contra alguma coisa, significa que você recebe o dobro da penalidade aplicada nessa situação, seja dano, ambiente…</p><br>
+
+        <h5>Pontos de Vida (PV/HP)</h5>
+        <p class="w3-text-grey">Determina o quanto você ainda possui de vida. Você possui um HP máximo igual a seu Vigor e vai perdendo a medida em que leva dano.
+          <br><br>Você recupera seus HP’s descansando. A cada hora de descanso você recupera 2 HP’s</p><br>
+
+        <h5>Resistência</h5>
+        <p class="w3-text-grey">Se você resiste alguma coisa, significa que você recebe metade da penalidade aplicada nessa situação, seja dano, ambiente…</p><br>
+
+        <h5>Vantagem</h5>
+        <p class="w3-text-grey">Se você possui vantagem a alguma coisa, você tem +5 de modificador em dados que a envolvem.</p><br>
+
+        <h5></h5>
+        <p class="w3-text-grey"></p><br>
+
+      </div>
+      <div id="Condicoes" class="w3-container menu w3-padding-48 w3-card">
+        Algumas habilidades deixam determinadas condições em uma criatura e abaixo está a descrição de cada uma delas:<br><br>
+        <h5>Sangrando</h5>
+        <p class="w3-text-grey">Você leva um dano de 1d4 HP’s por turno, ignorando sua defesa.</p><br>
+
+        <h5>Tonto</h5>
+        <p class="w3-text-grey">Desvantagem em ambos os seus dados de ataque e esquiva, além de qualquer outra ação que envolva Agilidade.</p><br>
+
+        <h5>Cego</h5>
+        <p class="w3-text-grey">Você perde completamente sua visão e seu alcance de visão se torna 0. Você falha automaticamente qualquer teste que envolva exclusivamente a visão.<br><br> Testes que envolvem a visão não exclusivamente, como acertos, recebem desvantagem.</p><br>
+
+        <h2>Tipos de veneno</h2>
+        Algumas habilidades permitem escolher algum tipo de veneno. Aqui estão todos com suas respectivas descrições:
+        <br><br>
+        <h5>Cegueira</h5>
+        <p class="w3-text-grey">O alvo fica completamente cego. Receba as penalidades da Inabilidade Cego.</p><br>
+
+        <h5>Convulsões</h5>
+        <p class="w3-text-grey">Você recebe 10% do seu HP máximo de dano por turno, arredondando para baixo e com um valor mínimo de 1.</p><br>
+
+        <h5>Dormência</h5>
+        <p class="w3-text-grey">O alvo não consegue fazer ações, reações ou ações livres. O efeito é encerrado se o alvo for atacado ou se alguma criatura gastar uma ação para acordá-lo.</p><br>
+
+        <h5>Infarto</h5>
+        <p class="w3-text-grey">O alvo precisa rolar 2d6. Se o valor for maior do que 8, o alvo recebe esse valor de dano no HP diretamente.</p><br>
+
+        <h5>Paralisia</h5>
+        <p class="w3-text-grey">No início de cada fase do alvo, ele tem de rolar 1d4. Se o resultado for 1 ou 2, o alvo não consegue fazer ações, reações ou ações livres durante essa fase. Além disso, reduza a Agilidade pela metade enquanto o alvo estiver paralisado.</p><br>
+
+        <h5>Queda de temperatura</h5>
+        <p class="w3-text-grey">O alvo não consegue mais manter sua temperatura corporal ao ponto de possuir fraqueza ao calor enquanto envenenado. Além disso, reduza o Vigor pela metade enquanto envenenado, porém não contando para HP ou outras habilidades que tenham Vigor como valor</p>
+  
+      </div>    
+      <div id="Ambientes" class="w3-container menu w3-padding-48 w3-card">
+        Ao longo da campanha, talvez haja um conflito entre criaturas não adaptadas a se locomoverem ou respirarem eficientemente em algum dos ambientes, como criaturas sem nadadeiras na terra por exemplo.<br><br>
+
+        <h5>Locomoção (Água/Terra)</h5>
+        <p class="w3-text-grey">Quando isso acontecer, a criatura que não é especializada nesse ambiente sofre as seguintes penalidades:
+          <br><br>•	Desvantagem em qualquer teste físico (incluindo acertos e desvios).
+          <br>•	Movimentação reduzida pela metade.</p><br>
+
+        <h5>Respiração</h5>
+        <p class="w3-text-grey">Quando isso acontecer, a criatura que não é especializada nesse ambiente sofre a seguinte penalidade:
+          <br><br>•	Vigor reduzido pela metade para testes enquanto no ambiente, porém não contando para HP ou outras habilidades que tenham Vigor como valor.
+        <br><br>Além disso, ela pode aguentar minutos sem respirar igual à metade do valor do Vigor original. Quando esse tempo passar, a criatura aguenta no máximo os mesmos minutos inconsciente. Se depois disso ela ainda estiver sem respirar, ela morre.
+        </p><br>
+
+        <h5>Escuridão Parcial</h5>
+        <p class="w3-text-grey">Quando isso acontecer, a criatura que não possui visão noturna quando estiver na escuridão parcial recebe as seguintes penalidades.
+          <br><br>•	Desvantagem em testes que envolvam a visão, incluindo acerto e desvio.
+          <br>•	Alcance de visão é reduzido para 1/4.</p><br>
+
+        <h5>Escuridão Completa</h5>
+        <p class="w3-text-grey">Quando isso acontecer, a criatura que possui visão noturna tem os efeitos de uma Escuridão Parcial e a criatura que não tiver quando estiver na escuridão completa recebe as mesmas penalidades de Cego.</p><br>
+  
+      </div>
+      <div id="Combate" class="w3-container menu w3-padding-48 w3-card">
+
+        <h5></h5>
+        <p class="w3-text-grey"></p><br>
+  
+      </div>      
+    </div>
+  </div>
+
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CARATERÍSTICAS</span></h5>
+    As características em ERPG consistem nas evoluções básicas de sua criatura. Todo ser vivo existente necessita ter pelo menos uma de cada uma dessas características.
+    Criaturas são seres que tem um tamanho que varia entre 0,5 e 4 m e uma nova criatura possui um total de 16 Pontos de Evolução para gastar em uma gama de opções dentre Status de Habilidades. 
+  Primeiro, você deve escolher qual o tipo de criatura que você quer. Para isso, é necessário investir PE’s para certas características, sendo algumas delas conflitantes com outras.
+  <br>
+  <br>
+	Observação: Por tópico, se você apenas possuir características que custam 1 PE, uma delas você pode obtê-la de graça.
+  <br>
+  <br>
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Alimentacao');">
+        <div class="w3-col s6 tablink">Alimentação</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Locomoção</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Other');">
+        <div class="w3-col s6 tablink">Respiração</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Tamanho');">
+        <div class="w3-col s6 tablink">Tamanho</div>
+      </a>
+    </div>
+
+    <div id="Alimentacao" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Carnívoro (2 PE’s) (Mordida +2, Ameaça +2)</h5>
+      <p class="w3-text-grey">Se alimenta de carne. Normalmente essas criaturas precisam ter capacidades para obterem sua carne, seja por predatismo, alimentação de filhotes, ou algum outro método para roubar comida de outros bichos. </p><br>
+
+      <h5>Fungívoro (1 PE) (Ameaça -1)</h5>
+      <p class="w3-text-grey">Se alimenta de fungos, possuindo uma fonte de alimento em quase qualquer ambiente. Criaturas que possuem esse tipo de alimentação normalmente são simpáticas por não ameaçarem muita gente.</p><br>
+    
+      <h5>Herbívoro (2 PE’s) (Ameaça -2, Mordida +1)</h5>
+      <p class="w3-text-grey">Se alimenta de material vegetal: Herbívoros tendem a ser criaturas mais simpáticas do que os carnívoros, uma vez que não entram em confronto direto com outras criaturas para obter alimento, a não ser que por causa do ambiente os vegetais fiquem em falta.</p><br>
+    
+      <h5>Insetívoro (1 PE)</h5>
+      <p class="w3-text-grey">Se alimenta de insetos. Alguns insetívoros possuem uma aparência assustadora, enquanto outros aparentam ser inofensivos.</p><br>
+    
+      <h5>Necrófago (2 PE’s) (Mordida +2)</h5>
+      <p class="w3-text-grey">Se alimenta de carnes podres e estragadas saciando sua fome normalmente, não sofrendo nenhuma penalidade por comê-las.</p>
+    
+
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Bípede (1 PE) (Agilidade +1, Alcance de Visão +30 m) (Conflito com Quadrúpede e Centípede)</h5>
+      <p class="w3-text-grey">Andar sobre duas patas. Por causa disso, é normalmente mais alto do que os animais que não são bípedes e são do mesmo porte, logo conseguindo ter um maior campo de visão e alcance para regiões mais elevadas.</p><br>
+    
+      <h5>Quadrúpede (1 PE) (Vigor +1, Agilidade +2) (Conflito com Bípede e Centípede)</h5>
+      <p class="w3-text-grey">Andar sobre quatro patas. Uma vez com mais membros locomotores, criaturas quadrúpedes tendem a ser mais velozes e mais resistentes do que as criaturas que não tem tanta capacidade de movimentação.</p><br>
+    
+      <h5>Centípede (1 PE) (Vigor +2) (Conflito com Bípede e Quadrúpede)</h5>
+      <p class="w3-text-grey">Possui muitas patas, contudo não ganha benefícios de agilidade por ter tantas. Porém, se por algum motivo você perder algumas de suas patas, você não recebe nenhuma penalidade.</p><br>
+    
+      <h5>Rastejar (2 PE’s) (Agilidade +3)</h5>
+      <p class="w3-text-grey">Se deslocam sem utilizar nenhum membro locomotor, fazendo ser imprevisto o seu movimento. Contudo, tem seu pulo reduzido pela metade.</p><br>
+    
+      <h5>Nadadeira (2 PE’s) (Agilidade +1)</h5>
+      <p class="w3-text-grey">Possui membros especializados para ambiente aquático. Você não sofre penalidade de movimento por estar na água.</p><br>
+
+      <h5>Voo (? PE) (Agilidade +2, Alcance visual +15 m)</h5>
+      <p class="w3-text-grey">Você desenvolveu um método que possibilite voar, normalmente atribuindo a asas. Voar está diretamente relacionado com sua resistência, uma vez que você pode voar sem parar pelo tempo de metade do valor da sua resistência (arredondado para baixo). Você precisa descansar esse mesmo tempo sem voar para ter energia para voar de novo.</p><br>
+    </div>
+    <div id="Other" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Respiração Braquial (2 PE’s) (Vigor +1)</h5>
+        <p class="w3-text-grey">Respiração por brânquias. Permite você respirar em ambientes aquáticos.</p><br>
+      
+        <h5>Respiração Pulmonar (2 PE’s) (Vigor +2)</h5>
+        <p class="w3-text-grey">Respiração através de pulmões. É a mais eficiente forma de respiração sem ser em ambientes aquáticos.</p><br>
+      
+        <h5>Respiração Cutânea (Inabilidade) (Fraqueza ao Calor) (+ 12 PE’s)</h5>
+        <p class="w3-text-grey">Respiração por meio da pele, sendo possível respirar tanto em ambientes aquátios, quanto terrestres. Contudo, para conseguir respirar nessas condições, é preciso que o corpo esteja úmido, assim fazendo essas criaturas serem sensíveis ao calor.</p>
+
+    </div>    
+    <div id="Tamanho" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Pequeno (+3 Agilidade, -1 Ameaça)</h5>
+        <p class="w3-text-grey">Tamanho menos de 1,5 metros.</p><br>
+      
+        <h5>Médio (+1 Agilidade, +1 Vigor, +1 Defesa)</h5>
+        <p class="w3-text-grey">Tamanho entre 1,5 – 2,5 metros.</p><br>
+      
+        <h5>Grande (+2 Defesa, +2 Vigor, +1 Ameaça)</h5>
+        <p class="w3-text-grey">Tamanho mais de 2,5 metros.</p>
+
+    </div>    
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<!-- <div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div> -->
+<div class="w3-container" id="menu2">
+    <div class="w3-content" style="max-width:700px">
+   
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">HABILIDADES</span></h5>
+
+      Habilidades consistem em o que sua criatura é capaz de fazer. Elas podem ser passivas (aumento em algum atributo) ou ativas (alguma nova ação). Algumas habilidades possuem certos requisitos. Se sua criatura possui uma dessas e por alguma razão você não cumpre mais os requisitos, ela não poderá usar essa habilidade até que o requisito volte a ser cumprido. Habilidades não podem ser desaprendidas. Por último, elas são as responsáveis pela definição de seus atributos.
+      <h6 class="w3-padding-48"><span class="w3-tag w3-wide">HABILIDADES ACUMULATIVAS</span></h6>
+    
+      Habilidade acumulativas são habilidades que você pode pegar quantas vezes quiser.
+    <br><br> Os status alterados são modificados novamente em cada vez que você pegar a habilidade. Cada vez que você pegar uma habilidade acumulativa, seu próximo custo será +1 PE, depois +2 PE’s, +3 PE’s e assim sucessivamente. 
+    <br><br>
+  Obs.: Esse custo a mais de PE é em relação ao último, ou seja, se uma habilidade custa 2 PE’s inicialmente, essa será a lista de progressão do custo:
+  2 PE’s, 3 PE’s, 5 PE’s, 8 PE’s, 12 PE’s, e assim indo. <br><br>
+  Alguns efeitos acumulativos são descritos na própria habilidade. Se nada estiver escrito, apenas há o aumento dos status.<br><br>
+    
+      <div class="w3-row w3-center w3-card w3-padding">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Ataque');">
+          <div class="w3-col s6 tablink">Ataque</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Social');">
+          <div class="w3-col s6 tablink">Social</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Defesa');">
+          <div class="w3-col s6 tablink">Defesa</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Sobrevivencia');">
+          <div class="w3-col s6 tablink">Sobrevivência</div>
+        </a>
+      </div>
+  
+      <div id="Ataque" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Arremesso (Requer Inteligência 7 e Agilidade 7) (5 PE’s) (Inteligência +1, Agilidade +1, Arremesso +1) (Acumulativa)</h5>
+        <p class="w3-text-grey">Você descobriu como utilizar seu corpo ao ponto de arremessar a distâncias consideráveis. Você consegue arremessar objetos a uma distância de 2x Inteligência ou 2x Agilidade + 30 metros. Você pode arremessar objetos no inimigo e se os objetos possuírem dano perfurante o ataque ganha um nível (por exemplo, de Arremesso +1 vai para Arremesso +2), mas continuam tendo um cooldown do nível original.<br><br>
+        Efeito da acumulativa: Começando a partir da segunda compra, você não ganha bônus no status de Agilidade nem do de Inteligência.
+        </p><br>
+      
+        <h5>Coice (Requer Quadrúpede) (3 PE’s) (Coice +2) (Acumulativa)</h5>
+        <p class="w3-text-grey">Você aprendeu a atacar seus inimigos com suas patas traseiras, podendo ter uma chance de deixá-lo tonto. Para saber se o alvo ficou tonto, ele precisa rolar 1d20 + Inteligência, e se o resultado for menor que o seu total de acerto, ele fica tonto durante as próximas 3 fases dele.
+            <br><br>Efeito da acumulativa: Começando a partir da segunda compra, você ganha Coice +1 ao invés de +2.</p><br>
+
+        <h5>Cuspir fogo (3 PE’s)</h5>
+        <p class="w3-text-grey">?</p><br>
+      
+        <h5>Dentes Afiados (Requer Carnívoro, Necrófago ou Herbívoro) (2 PE’s) (Mordida +1, Ameaça +1) (Acumulativa)</h5>
+        <p class="w3-text-grey">Seus dentes se tornaram mais afiados para você conseguir penetrar a carne mais facilmente.</p><br>
+      
+        <h5>Dentes esmagadores (Requer Carnívoro ou Necrófago) (Mordida +2) (5 PE’s)</h5>
+        <p class="w3-text-grey">Sua mordida melhorou ainda mais, agora podendo quebrar ossos enquanto morde. O alvo tem uma chance de ficar sangrando; ele precisa rolar 1d20 + Defesa, e se o resultado for menor que o seu total de acerto, ele fica sangrando durante as próximas 5 fases dele.<br><br>
+        Você pode escolher não tentar quebrar os ossos na mordida. Se o fizer, ignore o efeito Mordida +2 da habilidade.
+        </p><br>
+
+        <h5>Força bruta (4 PE’s) (Acumulativa)</h5>
+        <p class="w3-text-grey">Sua força melhorou ao ponto de você dar muito dano. Agora você tem vantagem em testes que envolvam sua força e seu dado de dano muda de 1d4 para 1d6 na primeira compra e para 2d4 na segunda compra.</p><br>
+
+        <h5>Garras (2 PE’s) (Garra +1, Ameaça +2) (Requer pelo menos uma pata)</h5>
+        <p class="w3-text-grey">Você desenvolveu uma nova forma de ataque chamada Garra, que consiste em pedaços cortantes que saem de suas patas.</p><br>
+
+        <h5>Garras afiadas (Requer Garras) (3 PE’s) (Garra +2, Ameaça +1) (Acumulativa)</h5>
+        <p class="w3-text-grey">Suas garras se tornaram mais afiadas para você conseguir cortar a carne mais facilmente.</p><br>
+
+        <h5>Teia (3 PE’s) (Cooldown 4)</h5>
+        <p class="w3-text-grey">Afim de capturar criaturas, você desenvolveu um método eficiente para grudá-las em fios que saem de um membro seu. Seu alcance é 2x Agilidade e a criatura precisa fazer um save de Agilidade. Se falhar, ela está presa na sua teia.
+          <br><br>Além disso, uma criatura diferente do alvo pode tentar soltá-lo ou quebrar a teia com um ataque cortante que supere sua rolagem feita na hora de utilizar a teia. Se falhar, ela fica com o membro preso na região da teia onde ela atacou.
+          <br><br>Por último, você também pode grudar nesse fio e tem o controle para andar livremente sobre ele.</p><br>
+
+        <h5>Veneno (2 PE’s) (Ameaça +1) (Acumulativa)</h5>
+        <p class="w3-text-grey">Um de seus meios de ataque, com exceção do Ataque Corporal, agora possui um tipo de veneno. Além disso, para saber se o alvo ficou envenenado, ele precisa rolar 1d20 + Resistência, e se o resultado for menor que o seu total de acerto, ele recebe o tipo de veneno escolhido durante as próximas 5 fases dele. Além disso, aumente o nível do ataque selecionado em 1. 
+        <br><br>Efeito da acumulativa: Você pode selecionar essa habilidade mais de uma vez para escolher em outros ataques.</p><br>
+
+        <h5>Veneno letal (N PE’s) (Ameaça +2) (Veneno requerido)</h5>
+        <p class="w3-text-grey">O seu veneno agora é letal. Qualquer criatura não resistente a veneno tem um tempo que pode sobreviver sem tratamento, que pode ser achado em quase qualquer local de cura como hospitais. Esse tempo é demonstrado na tabela abaixo:</p><br>
+
+        <table>
+            <tr>
+                <th> Tempo (horas)</th>
+                <th> N </th>
+            </tr>
+            <tr>
+                <td class="w3-text-grey">24</td>
+                <td class="w3-text-grey">1 - 2</td>
+            </tr>
+            <tr>
+                <td class="w3-text-grey">12</td>
+                <td class="w3-text-grey">3 - 4</td>
+            </tr>
+            <tr>
+                <td class="w3-text-grey">6</td>
+                <td class="w3-text-grey">5 - 6</td>
+            </tr>
+            <tr>
+                <td class="w3-text-grey">3</td>
+                <td class="w3-text-grey">7 - 8</td>
+            </tr>
+            <tr>
+                <td class="w3-text-grey">1</td>
+                <td class="w3-text-grey">9 - 10</td>
+            </tr>
+            <tr>
+                <td class="w3-text-grey">0.5</td>
+                <td class="w3-text-grey">11</td>
+            </tr>
+            <tr>
+                <td class="w3-text-grey">0.25</td>
+                <td class="w3-text-grey">12</td>
+            </tr>
+        </table>
+
+      </div>
+  
+      <div id="Social" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Fofo (1 PE) (Ameaça -2) (Acumulativa)</h5>
+        <p class="w3-text-grey">Seu formato e características em geral te tornam em uma criatura extremamente fofa que não aparenta ser hostil.</p><br>
+
+        <h5>Canto (1 PE) (Ameaça -1)</h5>
+        <p class="w3-text-grey">Você possui uma voz encantadora que consegue se comunicar com todo mundo que canta.</p><br>
+
+        <h5>Mimetismo (2 PE’s) (Ameaça ±1)</h5>
+        <p class="w3-text-grey">Suas cores e formato fazem com que você aparente ser mais ou menos ameaçador. Aumente ou diminua a sua Ameaça em um valor.</p><br>
+
+        <h5>Hostilidade (1 PE) (Ameaça +1) (Acumulativa)</h5>
+        <p class="w3-text-grey">Você consegue emitir sentimentos hostis para qualquer criatura.</p><br>
+
+        <h5>Rugido assustador (1 PE) (Ameaça +2) </h5>
+        <p class="w3-text-grey">Seu barulho causado pela boca é normalmente feito para marcar território ou para espantar inimigos, mas que é um rugido que pode ser ouvido a quilômetros.</p><br>
+
+      </div>
+      <div id="Defesa" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Carapaça (1 PE) (Defesa +1)</h5>
+        <p class="w3-text-grey">Você agora possui uma camada de proteção em volta de sua pele. Se você possuir Respiração Cutânea, diminua a Resistência em 1 valor.</p><br>
+
+        <h5>Contra-ataque (3 PE) (Agilidade +1, Inteligência +1) (Reação)</h5>
+        <p class="w3-text-grey">Seus reflexos melhoraram no quesito combate. Toda vez em que você desviar de um ataque, você pode realizar qualquer ataque em quem o atacou como uma reação, contudo respeitando as regras de cooldown normalmente.</p><br>
+
+        <h5>Descarga elétrica (3 PE’s) (Acumulativa) (Ação/Reação) (Cooldown 3)</h5>
+        <p class="w3-text-grey">Seu corpo agora emite uma descarga elétrica em alguma criatura que o toque. O dano causado é 1d4+1 diretamente no HP do alvo, desconsiderando a defesa do mesmo. Esse dano não é modificado pela habilidade Força Bruta. 
+        </br>
+        </br>
+        Efeito da acumulativa: O dano vai progredindo a cada vez que essa habilidade for comprada desta maneira:        
+        <table>
+            <tr>
+                <th>1ª compra</th>
+                <th>2ª compra</th>
+                <th>3ª compra</th>
+                <th>4ª compra</th>
+                <th>5ª compra</th>
+            </tr>
+            <tr>
+                <td class="w3-text-grey">1d4+1</td>
+                <td class="w3-text-grey">1d6+1</td>
+                <td class="w3-text-grey">2d4+1</td>
+                <td class="w3-text-grey">3d4+2</td>
+                <td class="w3-text-grey">3d6+2</td>
+            </tr>
+        </table>
+        <p class="w3-text-grey">A cada duas compras, aumente o cooldown em 1.</p>
+        </p><br>
+
+        <h5>Escamas (1 PE) (Defesa +1) (Conflito com Respiração Cutânea) (Acumulativa)</h5>
+        <p class="w3-text-grey">Sua pele agora é revestida por um material chamado Escama, que a enrijece, aumentando sua capacidade defensiva.</p><br>
+
+        <h5>Espinhos (2 PE’s) (Reação)</h5>
+        <p class="w3-text-grey">Você possui um órgão extremamente duro ao redor de seu corpo. Toda vez que você receber um ataque, dê dano 2d4 penetrante ao seu oponente.</p><br>
+
+        <h5>Exoesqueleto (2 PE) (Defesa +3, Agilidade -2) (Conflito com Respiração Cutânea)</h5>
+        <p class="w3-text-grey">Você agora possui uma camada óssea externa ao seu corpo que serve como proteção. Contudo, por causa do peso e da falta de mobilidade que ela traz, você sofre uma penalidade em questão de movimentação.</p><br>
+
+        <h5>Melhor mobilidade (3 PE’s) (Agilidade +2, Inteligência +1) (Acumulativa)</h5>
+        <p class="w3-text-grey">Você aprendeu a coordenar melhor o seu corpo para maximizar sua movimentação.</p><br>
+
+        <h5>Pele venenosa</h5>
+        <p class="w3-text-grey">?</p><br>
+
+        <h5>Reflexos ágeis (3 PE’s) (Agilidade +2)</h5>
+        <p class="w3-text-grey">Você conseguiu obter uma quantidade superior de reflexos. A partir de agora, você rola 1d8 ao invés de 1d6 em rolagens de desviar de ataques. Além disso, você tem vantagem em qualquer teste que envolva seus reflexos.</p><br>
+
+        <h5>Secreção ácida</h5>
+        <p class="w3-text-grey">?</p><br>
+
+        <h5>Soltar tinta (2 PE’s) (Inteligência +1)</h5>
+        <p class="w3-text-grey">Você libera a partir de um buraco em seu corpo uma rajada de tinta que cega o inimigo durante 30 segundos.</p><br>
+      </div>    
+      <div id="Sobrevivencia" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Adaptação ao veneno (3 PE’s) (Vigor +1) (Acumulativa)</h5>
+        <p class="w3-text-grey">Você desenvolveu anticorpos totalmente adaptados a um tipo de veneno, fazendo você resistir a ele. Escolha um tipo de veneno, você agora tem vantagem em rolagens para saber se vai ser envenenado e o veneno dura metade da duração se você for envenenado.</p><br>
+
+        <h5>Camuflagem (4 PE’s) (Inteligência +2)</h5>
+        <p class="w3-text-grey">Sua coloração agora é da cor do ambiente em que você se encontra. Você tem vantagens em qualquer evento que envolva furtividade.</p><br>
+
+        <h5>Ecolocalização (2 PE’s) (Acumulativa)</h5>
+        <p class="w3-text-grey">Você desenvolveu uma nova forma de se localizar. Usando as frequências emitidas pela sua boca que apenas você escuta, é possível saber a localização precisa de seres e objetos ao redor de 30 m. Além disso, você não sofre penalidades por estar cego, contanto que ainda consiga emitir suas frequências e escutá-las.
+          <br><br>Efeito da acumulativa: A distância em que você consegue identificar seres e objetos aumenta em 30 m por compra.</p><br>
+
+        <h5>Escavar (2 PE’s) (Agilidade +1)</h5>
+        <p class="w3-text-grey">Você agora consegue cavar buracos de no máximo seu tamanho em alguma superfície terrestre.</p><br>
+
+        <h5>Estômago resistente (3 PE’s) (Vigor +2)</h5>
+        <p class="w3-text-grey">Você não sente efeitos por comer comidas envenenadas.</p><br>
+
+        <h5>Fôlego ampliado (Vigor +1) (2 PE’s)</h5>
+        <p class="w3-text-grey">Você desenvolveu um fôlego que aguenta por um tempo considerável sem respirar. O tempo que você consegue ficar sem respirar um total de horas igual a seu Vigor/2 e você não sofre penalidades por estar sem respirar.</p><br>
+
+        <h5>Hibernar (2 PE’s) (Vigor +2)</h5>
+        <p class="w3-text-grey">?</p><br>
+
+        <h5>Membrana Natatória (Requer pelo menos uma pata) (3 PE’s) (Agilidade +1)</h5>
+        <p class="w3-text-grey">Você desenvolveu membros entre os seus dedos que lhe auxiliam na movimentação em ambientes aquáticos. Você agora se movimenta sem desvantagens desse ambiente.</p><br>
+
+        <h5>Neurônios extras (2 PE’s) (Inteligência +2) (Acumulativa)</h5>
+        <p class="w3-text-grey">Depois de ter conseguido mais neurônios, as principais células do cérebro, você desenvolveu mais atividade cerebral.</p><br>
+
+        <h5>Olfato apurado (2 PE’s)</h5>
+        <p class="w3-text-grey">Seu olfato consegue sentir a presença de criaturas a uma distância de 1 km. Você sabe a localização com uma margem de erro de 10 m, mas assim que você vai se aproximando essa margem de erro vai diminuindo ao ponto de quando você está a 20 m, você sabe precisamente onde a criatura está. Além disso, você não sofre as penalidades por estar cego, contanto que consiga discernir cheiros.</p><br>
+
+        <h5>Olhos atentos (? PE’s) (Conflito com Cego) (Definitiva?)</h5>
+        <p class="w3-text-grey">Sua visão se torna extraordinária. Seu alcance visual é ampliado para 1000 m.</p><br>
+
+        <h5>Pelos (2 PE’s) (Resistência ao Frio)</h5>
+        <p class="w3-text-grey">Agora existem fios saindo de seus poros chamados pelos. Eles são responsáveis por aquecer o seu corpo em momentos de frio.</p><br>
+
+        <h5>Polegares opositores (3 PE’s) (Inteligência +1) (Pelo menos uma pata requerida)</h5>
+        <p class="w3-text-grey">Agora você consegue segurar coisas sem ser pela boca, podendo morder ou usá-la para outra função enquanto carrega algo. Você também se torna capaz de usar ferramentas mais avançadas. </p><br>
+
+        <h5>Respiração eficiente (2 PE’s) (Vigor +1, Inteligência +1) (Acumulativa)</h5>
+        <p class="w3-text-grey">Você melhorou seu método de respiração que agora não gasta tanta energia quanto estava gastando antes.</p><br>
+
+        <h5>Roer (1 PE’s) (Mordida +1)</h5>
+        <p class="w3-text-grey">Seus dentes se adaptaram para roer objetos de madeira. Você demora 30 – Agilidade segundos para roer 1 centímetro de espessura.</p><br>
+
+        <h5>Sistema nervoso central (Requer Neurônios extras) (5 PE’s) (Inteligência +5)</h5>
+        <p class="w3-text-grey">Você desenvolveu um Sistema Nervoso Central, agora fazendo com que sua atividade cerebral tenha se expandido grandemente.</p><br>
+
+        <h5>Suor (4 PE’s) (Resistência ao Calor) (Vigor +2)</h5>
+        <p class="w3-text-grey">Você agora produz suor, um mecanismo de resfriamento do próprio corpo cuja função é aguentar mais tempo em ambientes quentes e poder recuperar estamina em movimentos leves, como andar. Você pode recuperar 1 HP por hora nesses movimentos.</p><br>
+
+        <h5>Visão noturna (2 PE’s) (Conflito com Cego)</h5>
+        <p class="w3-text-grey">Você é capaz de ver no escuro normalmente. A visão é composta por tons de cinza e possui o mesmo alcance que ela tem em claro.</p><br>
+
+        <h5>Visão periférica ampliada (3 PE’s) (Alcance de visão +10 m) (Conflito com Cego)</h5>
+        <p class="w3-text-grey">Você desenvolveu uma visão em 360º, fazendo você não ter nenhum ponto cego.</p><br>
+
+        <!-- <h5></h5>
+        <p class="w3-text-grey"></p><br> -->
+  
+      </div>    
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<br>
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks, active, display;
+  display = document.getElementById(menuName).style.display;
+  if (display == "block") {
+    active = true
+  }
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  if (active) {
+    document.getElementById(menuName).style.display = "none"
+    evt.currentTarget.firstElementChild.className.replace(" w3-dark-grey", "");
+  }
+  else {
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+  }
+
+  
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
+
