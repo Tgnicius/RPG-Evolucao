@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
 body, html {
   height: 100%;
@@ -41,31 +42,63 @@ td, th {
 
 .tablink {
     transition: 0.3s;
+    color: black;
 }
 
 </style>
 <body>
 
 <!-- Links (sit on top) -->
-<div class="w3-top">
+<!-- <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
       <a href="#" class="hover w3-button w3-block w3-black">HOME</a>
     </div>
     <div class="w3-col s3">
-      <a href="#about" class="hoverr w3-button w3-block w3-black">INTRODUÇÃO</a>
+      <a href="#introducao" class="hoverr w3-button w3-block w3-black">INTRODUÇÃO</a>
     </div>
     <div class="w3-col s3">
         <a href="#mecanicas" class="hoverr w3-button w3-block w3-black">MECÂNICAS</a>
       </div>
     <div class="w3-col s3">
-      <a href="#menu" class="hoverr w3-button w3-block w3-black">CARACTERÍSTICAS</a>
+      <a href="#caracteristicas" class="hoverr w3-button w3-block w3-black">CARACTERÍSTICAS</a>
     </div>
     <div class="w3-col s3">
-      <a href="#menu2" class="hoverr w3-button w3-block w3-black">HABILIDADES</a>
+      <a href="#habilidades" class="hoverr w3-button w3-block w3-black">HABILIDADES</a>
     </div>
   </div>
-</div>
+</div> -->
+
+<nav style="background-color: black;" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <a class="navbar-brand" href="#">ERPG</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#introducao">Introdução</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#mecanicas" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mecânicas
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#caracteristicas">Características</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#habilidades">Habilidades</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="navbar-brand mr-auto">
+        v1.0
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
@@ -84,7 +117,7 @@ td, th {
 <div class="w3-sand w3-grayscale w3-large">
 
 <!-- About Container -->
-<div class="w3-container" id="about">
+<div class="w3-container" id="introducao">
   <div class="w3-content" style="max-width:700px">
     <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">INTRODUÇÃO</span></h5>
     Evolução – RPG (ERPG) é um sistema de Role Play Game inspirado na evolução dos animais em geral. Muita da inspiração veio de E.V.O – Search for Eden e Tier Zoo, um jogo de Super Nintendo e um canal no youtube, respectivamente.
@@ -240,6 +273,27 @@ td, th {
 
         <h5></h5>
         <p class="w3-text-grey"></p><br>
+
+        <h5></h5>
+        <p class="w3-text-grey"></p><br>
+
+        <h5></h5>
+        <p class="w3-text-grey"></p><br>
+
+        <h5></h5>
+        <p class="w3-text-grey"></p><br>
+
+        <h5></h5>
+        <p class="w3-text-grey"></p><br>
+
+        <h5></h5>
+        <p class="w3-text-grey"></p><br>
+
+        <h5></h5>
+        <p class="w3-text-grey"></p><br>
+
+        <h5></h5>
+        <p class="w3-text-grey"></p><br>
   
       </div>      
     </div>
@@ -247,7 +301,7 @@ td, th {
 
 
 <!-- Menu Container -->
-<div class="w3-container" id="menu">
+<div class="w3-container" id="caracteristicas">
   <div class="w3-content" style="max-width:700px">
  
     <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CARATERÍSTICAS</span></h5>
@@ -256,7 +310,7 @@ td, th {
   Primeiro, você deve escolher qual o tipo de criatura que você quer. Para isso, é necessário investir PE’s para certas características, sendo algumas delas conflitantes com outras.
   <br>
   <br>
-	Observação: Por tópico, se você apenas possuir características que custam 1 PE, uma delas você pode obtê-la de graça.
+	<!--Observação: Por tópico, se você apenas possuir características que custam 1 PE, uma delas você pode obtê-la de graça. -->
   <br>
   <br>
     <div class="w3-row w3-center w3-card w3-padding">
@@ -354,7 +408,7 @@ td, th {
     </form>
   </div>
 </div> -->
-<div class="w3-container" id="menu2">
+<div class="w3-container" id="habilidades">
     <div class="w3-content" style="max-width:700px">
    
       <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">HABILIDADES</span></h5>
@@ -639,7 +693,7 @@ function openMenu(evt, menuName) {
 }
 document.getElementById("myLink").click();
 </script>
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
 
